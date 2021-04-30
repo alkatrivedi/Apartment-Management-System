@@ -31,11 +31,9 @@
     
 </head>
 <body>
-    <div class="container">
-  
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="">Apartment Management</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -48,7 +46,7 @@
                     <a class="nav-link" href="payments.php">Payments</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Welcome <?php echo $_SESSION['user']; ?></a>
+                    <a class="nav-link" href="">Welcome <?php echo $_SESSION['user']; ?></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="logout.php">Log out</a>
@@ -58,13 +56,13 @@
               </div>
             </div>
             </nav>
-               
+    <div class="container" style="text-align:center;">
               <br>
             <h3> My details </h3>
 
              <br>
               <br>
-              <table class="table">
+              <table class="table" style="margin: 0 auto; width:600px;">
               <tbody>
              
                   <?php   
@@ -113,7 +111,7 @@
               </tbody>     
               </table>
               <form action="" method="post">
-        <button type="submit" class="btn btn-primary">Pay Rent</button>
+        <button type="submit" class="btn btn-primary" style="margin-top:10px;">Pay Rent</button>
      </form>
      </div>
     

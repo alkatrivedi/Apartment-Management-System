@@ -31,11 +31,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
 <body>
-     <div class="container" >
-        <!--nav bar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="">Apartment Management</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -51,7 +49,7 @@
                     <a class="nav-link" href="ownerRegister.php">Ownership</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="">
                      Welcome <?php echo $_SESSION['user']; ?>
                     </a>
                   </li>
@@ -62,12 +60,14 @@
               </div>
             </div>
           </nav>
+     <div class="container" style="text-align:center;">
+        <!--nav bar-->
           <br> <br>
         
 
         <p> Add buiding </p>
             <br>
-        <form  method="post">
+        <form  method="post" style="margin: 0 auto; width:600px;">
             <div class="row mb-3">
               <label for="bname" class="col-sm-2 col-form-label">Building name</label>
               <div class="col-sm-10">
