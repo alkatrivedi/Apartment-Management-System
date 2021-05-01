@@ -1,0 +1,157 @@
+.navbar {
+    height: 4.5rem;
+    padding: 1rem 10rem;
+    background-color: #2e343f;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.7rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#navbarNav {
+    flex-grow: 0 !important;
+}
+
+#navbarNav .nav-link {
+    padding-left: 40px !important;
+    font-size: 16px;
+}
+
+#admin {
+    margin-top: 9rem;
+}
+
+@media(max-width: 1200px) {
+    .navbar {
+        padding: 1rem 5rem;
+    }
+}
+
+/* ---------------------------login form---------------------- */
+
+body {
+    background: #EFEFBB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.inside_form {
+    background: url("ams/assets/1.jpg") no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    font-family: 'Open Sans', sans-serif;
+    width: 32%;
+    max-width: 525px;
+    min-height: 500px;
+    margin: 8rem auto;
+    display: flex;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.inside_form form {
+    width: 100%;
+    height: 100%;
+}
+
+.inside_form .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    position: absolute;
+    background-color: rgba(40, 57, 101, .9);
+    border-radius: 0.7rem;
+}
+
+.inside_form form h2 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.inside_form form label {
+    margin-bottom: 0rem;
+    font-size: 13px;
+    color: #AAAAAA;
+}
+
+.inside_form .form-control {
+    border-radius: 2rem;
+    padding: 15px 20px;
+    height: 3rem;
+    /* background-color: rgba(255,255,255,.1); */
+}
+
+.inside_form .button {
+    border-radius: 2rem;
+    width: 100%;
+    border: none;
+    padding: 12px 20px;
+    background: #1161EE;
+    /* z-index: 1; */
+}
+
+.inside_form .ForgotPassword {
+    display: flex;
+    justify-content: space-around;
+}
+
+.inside_form .ForgotPassword a {
+    color: white;
+}
+
+hr {
+    height: 1px;
+    margin: 60px 0 50px 0;
+    background: rgba(255, 255, 255, .2);
+}
+
+.errorMessages {
+    display: none;
+    list-style-type: disc;
+    margin: 0 10px 15px 10px;
+    padding: 8px 35px 8px 30px;
+    color: #B94A48;
+    background-color: #F2DEDE;
+    border: 2px solid #EED3D7;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.errorMessages span {
+    font-weight: bold;
+}
+
+/*---------------responsive--------------*/
+
+@media (max-width:995px) {
+    .inside_form {
+        width: 50%;
+    }
+}
+
+@media (max-width:500px) {
+    .inside_form {
+        width: 70%;
+    }
+    .inside_form form h2 {
+        font-size: 1.5rem;
+    }
+    .inside_form .ForgotPassword {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+        background-color: rgb(12, 1, 70);
+    }
+    #mainNav.navbar-scrolled {
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+    }
+}
