@@ -18,14 +18,14 @@
     font-size: 16px;
 }
 
-#admin {
-    margin-top: 9rem;
-}
-
 @media(max-width: 1200px) {
     .navbar {
         padding: 1rem 5rem;
     }
+}
+
+#admin {
+    margin-top: 9rem;
 }
 
 /* ---------------------------login form---------------------- */

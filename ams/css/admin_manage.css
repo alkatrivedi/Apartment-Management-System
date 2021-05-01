@@ -1,0 +1,38 @@
+.navbar {
+    height: 4.5rem;
+    padding: 1rem 6rem;
+    background-color: #2e343f;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.7rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#navbarNav {
+    flex-grow: 0 !important;
+}
+
+#navbarNav .nav-link {
+    padding-left: 40px !important;
+    font-size: 16px;
+}
+
+@media(max-width: 1250px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    #navbarNav .nav-link {
+        padding-left: 30px !important;
+        font-size: 16px;
+    }
+}
+
+body {
+    background: #EFEFBB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
