@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     </div>
   </nav>
 
-  
+
   <div class="container">
     <?php
     $tid = $_SESSION['tid'];
@@ -54,7 +54,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     <br>
     <h2>Previous Payments</h2>
 
-    <table class="table mt-4">
+    <table class="table mt-4" id="pay">
       <tbody>
         <thead>
           <tr>

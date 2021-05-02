@@ -82,6 +82,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <ul class="navbar-nav">
           <li class="nav-item">
+            <a class="nav-link" href="ownerHome.php">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="tenantRegister.php">Register Tenant</a>
           </li>
           <li class="nav-item">

@@ -36,7 +36,3 @@ body {
     background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-table th, table td,thead,tbody,tfoot,tr {
-    border-bottom: 1px solid black !important;
-}
