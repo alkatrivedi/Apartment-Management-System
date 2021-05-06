@@ -1,7 +1,16 @@
+body {
+    background: #EFEFBB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .navbar {
-    height: 4.5rem;
-    padding: 1rem 6rem;
-    background-color: #2e343f;
+    padding: 0.6rem 6rem !important;
+    background-color: #212633;
+    box-shadow: 0.3rem 0.4rem 0.7rem rgba(0, 0, 0, 0.418);
 }
 
 .navbar .navbar-brand {
@@ -20,7 +29,7 @@
 
 @media(max-width: 1250px) {
     .navbar {
-        padding: 1rem 2rem;
+        padding: 0.6rem 1rem !important;
     }
     #navbarNav .nav-link {
         padding-left: 30px !important;
@@ -28,11 +37,22 @@
     }
 }
 
-body {
-    background: #EFEFBB;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@media(max-width: 991px) {
+    #navbarNav .nav-link {
+        padding: 0.9rem 0rem 0.6rem !important;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 400px) {
+    .navbar {
+        padding: 0.7rem 0.1rem !important;
+    }
+    .navbar .navbar-brand {
+        font-size: 1rem;
+    }
+    .navbar-brand img {
+        height: 35px;
+        width: 45px;
+    }
 }

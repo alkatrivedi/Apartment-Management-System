@@ -1,7 +1,16 @@
+body {
+    background: #EFEFBB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .navbar {
-    height: 4.5rem;
-    padding: 1rem 10rem;
-    background-color: #2e343f;
+    padding: 0.6rem 10rem !important;
+    background-color: #212633 !important;
+    box-shadow: 0.3rem 0.4rem 0.7rem rgba(0, 0, 0, 0.418);
 }
 
 .navbar .navbar-brand {
@@ -20,27 +29,61 @@
 
 @media(max-width: 1200px) {
     .navbar {
-        padding: 1rem 5rem;
+        padding: 0.6rem 5rem !important;
     }
 }
 
-#admin {
+@media(max-width: 991px) {
+    #navbarNav .nav-link {
+        padding: 0.9rem 0rem 0.6rem !important;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 700px) {
+    .navbar {
+        padding: 0.7rem 1rem !important;
+    }
+    .navbar .navbar-brand {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .navbar {
+        padding: 0.7rem 0.1rem !important;
+    }
+    .navbar .navbar-brand {
+        font-size: 1rem;
+    }
+    .navbar-brand img {
+        height: 35px;
+        width: 45px;
+    }
+}
+
+#admin, #owner, #tenant {
     margin-top: 9rem;
 }
 
 /* ---------------------------login form---------------------- */
 
-body {
-    background: #EFEFBB;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, #D4D3DD, #EFEFBB) fixed;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#admin {
+    background: url("../assets/b6.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#owner {
+    background: url("../assets/b5.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#tenant {
+    background: url("../assets/b4.jpg") no-repeat center;
+    background-size: 100% 100%;
 }
 
 .inside_form {
-    background: url("ams/assets/1.jpg") no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
     font-family: 'Open Sans', sans-serif;
     width: 32%;
@@ -137,21 +180,12 @@ hr {
 @media (max-width:500px) {
     .inside_form {
         width: 70%;
+        min-height: 440px;
     }
     .inside_form form h2 {
         font-size: 1.5rem;
     }
     .inside_form .ForgotPassword {
         font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 992px) {
-    #mainNav {
-        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
-        background-color: rgb(12, 1, 70);
-    }
-    #mainNav.navbar-scrolled {
-        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
     }
 }
