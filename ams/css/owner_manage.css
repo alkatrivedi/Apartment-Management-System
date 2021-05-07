@@ -44,7 +44,7 @@ body {
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 450px) {
     .navbar {
         padding: 0.7rem 0.1rem !important;
     }
@@ -54,5 +54,160 @@ body {
     .navbar-brand img {
         height: 35px;
         width: 45px;
+    }
+}
+
+/* css for illustration in owner home */
+
+.section-content-block {
+    margin: 2rem 2rem 1.5rem !important;
+}
+
+.section-content-block div #illustration img {
+    height: 400px;
+    width: 700px;
+}
+
+.section-content-block #descriptive .contents h2 {
+    font-size: 2.1rem;
+}
+
+.section-content-block #descriptive .contents h5 {
+    font-size: 1.2rem;
+}
+
+.section-content-block #descriptive .contents {
+    text-align: left;
+}
+
+.section-content-block #descriptive .contents div .but-2 {
+    margin-left: 1rem !important;
+}
+
+@media (max-width: 1200px) {
+    .section-content-block #descriptive .contents h2 {
+        font-size: 1.7rem;
+    }
+    .section-content-block #descriptive .contents h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-content-block #descriptive .contents {
+        text-align: center;
+    }
+    .section-content-block {
+        margin: 4rem 2rem 2rem !important;
+    }
+}
+
+@media (max-width: 525px) {
+    .section-content-block #descriptive .contents h2 {
+        font-size: 1.5rem;
+    }
+    .section-content-block #descriptive .contents h5 {
+        font-size: 1rem;
+    }
+    .section-content-block #descriptive .contents div .btn {
+        font-size: 0.8rem;
+    }
+    .section-content-block div #illustration img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 325px) {
+    .section-content-block #descriptive .contents h2 {
+        font-size: 1rem;
+    }
+    .section-content-block #descriptive .contents h5 {
+        font-size: 0.8rem;
+    }
+    .section-content-block #descriptive .contents div .btn {
+        font-size: 0.8rem;
+    }
+}
+
+/* ------------------apartment tile form------------------- */
+
+.inside_form {
+    background: url("../assets/b2.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    font-family: 'Open Sans', sans-serif;
+    width: 32%;
+    max-width: 525px;
+    min-height: 160px;
+    margin: 3rem auto;
+    display: flex;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.inside_form .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    position: absolute;
+    background-color: rgba(173, 190, 231, 0.747);
+    border-radius: 0.7rem;
+}
+
+/*---------------responsive--------------*/
+
+@media (max-width:1240px) {
+    .inside_form {
+        width: 40%;
+    }
+}
+
+@media (max-width:995px) {
+    .inside_form {
+        width: 70%;
+    }
+}
+
+@media (max-width:500px) {
+    .inside_form h3 {
+        margin-top: 0rem !important;
+        font-size: 1.1rem !important;
+        width: 85%;
+    }
+}
+
+/* ---------------form tenant register -------------- */
+
+@media(max-width: 800px) {
+    .form-add-tenant {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 575px) {
+    .form-add-tenant {
+        width: 70% !important;
+    }
+}
+
+/* --------------mytenants--------------------------- */
+
+.tenant-table {
+    margin: 3rem 2rem !important;
+}
+
+@media(max-width: 800px) {
+    .tenant-table {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media(max-width: 450px) {
+    .tenant-table {
+        font-size: 0.6rem !important;
+        margin: 3rem 0rem !important;
     }
 }

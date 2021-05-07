@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" class="tab-icon" href="assets/ttt.png">
-  <title>Owner HomePage</title>
+  <!-- <title>Owner HomePage</title> -->
+  <title>HomeRiver Group</title>
   <link rel="stylesheet" href="css/tenant_manage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <span>
@@ -65,16 +66,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </nav>
 
+  <br><br><br>
+  <div class="container mt-4 mb-5" style="text-align:center;">
 
-  <div class="container" style="text-align:center;">
     <br>
     <h3> My details </h3>
+    <br>
+    <br>
 
-    <br>
-    <br>
-    <table class="table" style="margin: 0 auto; width:600px;">
+    <table class="table" id="table-details">
       <tbody>
-
+        
         <?php
 
         $tid = $_SESSION['tid'];
@@ -83,7 +85,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($db, $sql) or die('error2 querring database.');
         $r1 = mysqli_query($db, $sql);
         $row1 = mysqli_fetch_array($r1);
-
 
         $sql2 = "SELECT * FROM apartment WHERE id=" . $row1['aid'];
         mysqli_query($db, $sql2) or die('error3 querring database.');
@@ -104,8 +105,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($db, $sql5) or die('error6 querring database.');
         $r5 = mysqli_query($db, $sql5);
         $row5 = mysqli_fetch_array($r5);
-
-
         echo  '<tr><th scope="row">Name</th><td>' . $row1['name'] . '</td> </tr>
                      <tr><th scope="row">Email </th><td>' . $row1['email'] . '</td></tr>
                    <tr><th scope="row">Phone </th><td>' . $row1['phone'] . '</td></tr>
@@ -115,11 +114,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                    <tr><th scope="row">Owner Email </th><td>' . $row5['email'] . '</td></tr>
                    <tr><th scope="row">Owner Phone </th><td>' . $row5['phone'] . '</td></tr>
                    <tr><th scope="row">Rent </th><td>' . $row1['rent'] . '</td></tr>';
-
-
         ?>
       </tbody>
     </table>
+
     <form action="" method="post">
       <button type="submit" class="btn btn-primary mt-5" style="margin-top:10px;">Pay Rent</button>
     </form>

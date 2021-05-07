@@ -12,15 +12,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" class="tab-icon" href="assets/ttt.png">
-  <title>Owner HomePage</title>
+  <!-- <title>Owner HomePage</title> -->
+  <title>HomeRiver Group</title>
   <link rel="stylesheet" href="css/owner_manage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <span>
@@ -48,46 +51,82 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
           <li class="nav-item">
             <a class="nav-link" href="logout.php">Log out</a>
           </li>
-
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container mt-5">
-    <?php
-    $owner = $_SESSION['oid'];
-    ?>
-    <h3>
-      Number of Apartments:
-      <?php
-      $db = mysqli_connect('localhost', 'root', '', 'apartmentdb')
-        or die('error connect to server');
-      $sql = "SELECT * FROM ownership WHERE ownerid= $owner";
-      $result = mysqli_query($db, $sql);
-      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-      $count = mysqli_num_rows($result);
-      echo $count;
-      ?>
-    </h3>
-    <h3>
-      Number of Tenants:
-      <?php
-      $db = mysqli_connect('localhost', 'root', '', 'apartmentdb')
-        or die('error connect to server');
 
-      $sql = "SELECT * FROM ownership WHERE ownerid= $owner";
-      $result = mysqli_query($db, $sql);
-      $count = 0;
-      while ($row = mysqli_fetch_array($result)) {
-        $sql1 = "SELECT * FROM tenant WHERE  aid= " . $row['aid'];
-        $result1 = mysqli_query($db, $sql1);
-        $r = mysqli_fetch_array($result1);
-        $count += mysqli_num_rows($result1);
-      }
-      echo $count;
+  <br><br><br>
+
+  <section class="section-content-block">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-6" id="descriptive">
+          <div class="contents d-flex flex-column justify-content-around">
+            <h5 class="mb-3" style="font-family: 'Montserrat', sans-serif; color: #281436;">Not able to remember details of your tenant?</h5>
+            <h2 class="mb-3" style="font-family: 'Montserrat', sans-serif; color: black;">
+              HomeRiver is the right place for it!
+              </h1>
+              <h5 class="mb-3 mt-1" style="font-family: 'Montserrat', sans-serif; color: #281436;">
+                This is a place where you can register your apartment, to whom did you sold the apartment as well as the details of your tenants so that whenever you want - you can have access to those information!
+                <br><br> All the information regarding the apartments you own and have given for rents are here!
+              </h5>
+              <div class="mt-1">
+                <a type="button" class="btn mb-2 btn-primary" href="myTenants.php">See Tenant Details</a>
+                <a type="button" class="btn mb-2 btn-primary but-2" href="tenantRegister.php">New Tenant</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-3 mt-lg-0" id="illustration">
+          <div class="row justify-content-center align-items-center">
+            <img class="img-fluid" src="assets/i1.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="inside_form">
+    <div class="overlay">
+      <?php
+      $owner = $_SESSION['oid'];
       ?>
-    </h3>
+      <h3>
+        Number of Apartments:
+        <?php
+        $db = mysqli_connect('localhost', 'root', '', 'apartmentdb')
+          or die('error connect to server');
+        $sql = "SELECT * FROM ownership WHERE ownerid= $owner";
+        $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $count = mysqli_num_rows($result);
+        echo $count;
+        ?>
+      </h3>
+      <h3>
+        Number of Tenants:
+        <?php
+        $db = mysqli_connect('localhost', 'root', '', 'apartmentdb')
+          or die('error connect to server');
+
+        $sql = "SELECT * FROM ownership WHERE ownerid= $owner";
+        $result = mysqli_query($db, $sql);
+        $count = 0;
+        while ($row = mysqli_fetch_array($result)) {
+          $sql1 = "SELECT * FROM tenant WHERE  aid= " . $row['aid'];
+          $result1 = mysqli_query($db, $sql1);
+          $r = mysqli_fetch_array($result1);
+          $count += mysqli_num_rows($result1);
+        }
+        echo $count;
+        ?>
+      </h3>
+    </div>
   </div>
+
+  <!--overlay form -->
+  <script src="/js/signup.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
   <!-- bootstrap jquery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

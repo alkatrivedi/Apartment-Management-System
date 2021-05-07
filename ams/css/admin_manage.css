@@ -27,6 +27,16 @@ body {
     font-size: 16px;
 }
 
+.form-add-building {
+    width: 60% !important;
+    margin: 0 auto;
+}
+
+.form-add-owner {
+    width: 55% !important;
+    margin: 0 auto;
+}
+
 @media(max-width: 1250px) {
     .navbar {
         padding: 0.6rem 1rem !important;
@@ -35,6 +45,10 @@ body {
         padding-left: 30px !important;
         font-size: 16px;
     }
+    .form-add-owner {
+        width: 60% !important;
+        margin: 0 auto;
+    }
 }
 
 @media(max-width: 991px) {
@@ -42,9 +56,42 @@ body {
         padding: 0.9rem 0rem 0.6rem !important;
         font-size: 16px;
     }
+    .form-add-building {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .form-add-owner {
+        width: 85% !important;
+        margin: 0 auto;
+    }
+    table {
+        font-size: 0.9rem;
+    }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 770px) {
+    .form-add-building {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .form-add-owner {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 575px) {
+    .form-add-owner {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+    .form-add-building {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 450px) {
     .navbar {
         padding: 0.7rem 0.1rem !important;
     }
@@ -54,5 +101,12 @@ body {
     .navbar-brand img {
         height: 35px;
         width: 45px;
+    }
+    .form-add-building {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+    table {
+        font-size: 0.8rem;
     }
 }

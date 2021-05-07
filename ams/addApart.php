@@ -29,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" class="tab-icon" href="assets/ttt.png">
-  <title>Apartments</title>
+  <!-- <title>Apartments</title> -->
+  <title>HomeRiver Group</title>
   <link rel="stylesheet" href="css/admin_manage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <span>
@@ -71,28 +72,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </nav>
 
-  
+<br><br><br>
   <div class="container" style="text-align:center;">
-    <!--nav bar-->
     <br> <br>
-    <!--login-->
-
     <p style="font-size: 20px; font-weight: 500; color: darkblue;"> Add Apartment </p>
     <br>
-    <form method="post" style="margin: 0 auto; width:600px;">
+
+    <form method="post" class="form-add-building">
       <div class="row mb-3">
-        <label for="getbn" class="col-sm-2 col-form-label">Select Building</label>
-        <div class="col-sm-10">
+        <label for="getbn" class="col-sm-3 col-form-label">Select Building</label>
+        <div class="col-sm-9">
           <select class="form-select" id="getbn" name="getbn" required>
             <option value=""> </option>
             <?php
-
             function  func($id, $name, $addrs)
             {
               $element = ' <option value=' . $id . '>' . $name . ',' . $addrs . '</option>';
               echo $element;
             }
-
             $query = "SELECT * FROM building";
             mysqli_query($db, $query) or die('error querring database.');
             $result = mysqli_query($db, $query);
@@ -100,30 +97,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               func($row['id'], $row['name'], $row['address']);
             }
             ?>
-
           </select>
         </div>
       </div>
-
       <div class="row mb-3">
-        <label for="anum" class="col-sm-2 col-form-label">Apartment Number</label>
-        <div class="col-sm-10">
+        <label for="anum" class="col-sm-3 col-form-label">Apartment Number</label>
+        <div class="col-sm-9">
           <input type="number" class="form-control" id="anum" name="anum" required>
 
         </div>
       </div>
-
       <div class="row mb-3">
-        <label for="desc" class="col-sm-2 col-form-label">Description</label>
-        <div class="col-sm-10">
+        <label for="desc" class="col-sm-3 col-form-label">Description</label>
+        <div class="col-sm-9">
           <input type="text" class="form-control" id="desc" name="desc" required>
-
         </div>
       </div>
-
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
+
     <br> <br>
+
     <!--table-->
     <table class="table">
       <thead>

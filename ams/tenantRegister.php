@@ -37,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Owner Register</title>
+  <!-- <title>Owner Register</title> -->
+  <title>HomeRiver Group</title>
   <link rel="icon" class="tab-icon" href="assets/ttt.png">
   <link rel="stylesheet" href="css/owner_manage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -54,11 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       var val6 = document.getElementById("rent").value;
 
       self.location = 'tenantRegister.php?&getbn=' + val1 + '&name=' + val2 + '&email=' + val3 + '&pass=' + val4 + '&phn=' + val5 + '&rent=' + val6;
-
     }
   </script>
-
-
 </head>
 
 <body>
@@ -72,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   ?>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <span>
@@ -107,64 +105,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </nav>
+
+  <br><br><br><br>
+
   <div class="container" style="text-align:center;">
-    <!--nav bar-->
+
     <br> <br>
-    <!--login-->
-    <form action="" method="post" style="margin: 0 auto; width:600px;">
+
+    <form action="" method="post" style="margin: 0 auto; width:600px;" class="form-add-tenant">
       <div class="row mb-3">
-        <label for="name" class="col-sm-2 col-form-label">Name</label>
-        <div class="col-sm-10">
+        <label for="name" class="col-sm-3 col-form-label">Name</label>
+        <div class="col-sm-9">
           <input type="text" class="form-control" id="name" name="name" <?php
                                                                         if (isset($name) and strlen($name) > 0)
                                                                           echo 'value =' . $name . ' ';
                                                                         else echo 'value="" ';
                                                                         ?> required>
-
         </div>
       </div>
       <div class="row mb-3">
-        <label for="email" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
+        <label for="email" class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-9">
           <input type="email" class="form-control" id="email" name="email" <?php
                                                                             if (isset($email) and strlen($email) > 0)
                                                                               echo 'value =' . $email . ' ';
                                                                             else echo 'value="" ';
                                                                             ?> required>
-
         </div>
       </div>
       <div class="row mb-3">
-        <label for="pass" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
+        <label for="pass" class="col-sm-3 col-form-label">Password</label>
+        <div class="col-sm-9">
           <input type="password" class="form-control" id="pass" name="pass" <?php
                                                                             if (isset($pass) and strlen($pass) > 0)
                                                                               echo 'value =' . $pass . ' ';
                                                                             else echo 'value="" ';
                                                                             ?> required>
-
         </div>
       </div>
-
       <div class="row mb-3">
-        <label for="phn" class="col-sm-2 col-form-label">Phone Number</label>
-        <div class="col-sm-10">
+        <label for="phn" class="col-sm-3 col-form-label">Phone Number</label>
+        <div class="col-sm-9">
           <input type="tel" class="form-control" id="phn" name="phn" <?php
                                                                       if (isset($phn) and strlen($phn) > 0)
                                                                         echo 'value =' . $phn . ' ';
                                                                       else echo 'value="" ';
                                                                       ?> required>
-
         </div>
       </div>
-
       <div class="row mb-3">
-        <label for="getbn" class="col-sm-2 col-form-label">Select Building</label>
-        <div class="col-sm-10">
+        <label for="getbn" class="col-sm-3 col-form-label">Select Building</label>
+        <div class="col-sm-9">
           <select class="form-select" id="getbn" name="getbn" required onchange="reload(this.form)">
             <option value=""> </option>
             <?php
-
             function  func($id, $name)
             {
               $element = ' <option value=' . $id . '>' . $name . '</option>';
@@ -194,20 +188,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo '<option  value=' . $row['id'] . '>' . $row['name'] . ',' . $row['address'] . ' </option>';
             }
             ?>
-
           </select>
-
         </div>
       </div>
-
       <div class="row mb-3">
-        <label for="getap" class="col-sm-2 col-form-label">Select Apartment</label>
-        <div class="col-sm-10">
+        <label for="getap" class="col-sm-3 col-form-label">Select Apartment</label>
+        <div class="col-sm-9">
           <select class="form-select" id="getap" name="getap" required>
             <option value=""> </option>
             <?php
-
-
             function  apfunc($id, $name)
             {
               $element = ' <option value=' . $id . '>' . $name . '</option>';
@@ -233,30 +222,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               }
             }
             ?>
-
           </select>
         </div>
       </div>
-
       <div class="row mb-3">
-        <label for="rent" class="col-sm-2 col-form-label">Rent</label>
-        <div class="col-sm-10">
+        <label for="rent" class="col-sm-3 col-form-label">Rent</label>
+        <div class="col-sm-9">
           <input type="rent" class="form-control" id="rent" name="rent" <?php
                                                                         if (isset($rent) and strlen($rent) > 0)
                                                                           echo 'value =' . $rent . ' ';
                                                                         else echo 'value="" ';
                                                                         ?> required>
-
         </div>
       </div>
-
-
-
-
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
-
-
   </div>
 
   <!-- bootstrap jquery -->

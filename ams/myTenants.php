@@ -12,7 +12,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" class="tab-icon" href="assets/ttt.png">
-  <title>Owner HomePage</title>
+  <!-- <title>Owner HomePage</title> -->
+  <title>HomeRiver Group</title>
   <link rel="stylesheet" href="css/owner_manage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,7 +21,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <span>
@@ -54,8 +55,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     </div>
   </nav>
 
+  <br><br><br><br>
 
-  <div class="container mt-5" style="text-align:center;">
+  <div class="tenant-table" style="text-align:center;">
     <?php
     $owner = $_SESSION['oid'];
     ?>

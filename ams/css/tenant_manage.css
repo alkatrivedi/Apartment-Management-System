@@ -44,7 +44,7 @@ body {
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 450px) {
     .navbar {
         padding: 0.7rem 0.1rem !important;
     }
@@ -54,5 +54,40 @@ body {
     .navbar-brand img {
         height: 35px;
         width: 45px;
+    }
+}
+
+/* ------------------------tenant details table--------------------- */
+
+#table-details {
+    width: 600px;
+    margin: -1rem auto 0rem !important;
+}
+
+#table-details th {
+    text-align: end !important;
+    width: 300px !important;
+    padding-right: 2rem !important;
+}
+
+#table-details td {
+    text-align: start !important;
+    width: 300px !important;
+    padding-left: 1rem !important;
+}
+
+@media(max-width: 800px) {
+    #table-details {
+        font-size: 0.8rem !important;
+        width: 90% !important;
+        margin: -1rem 0rem 0rem !important;
+    }
+    #table-details th {
+        width: 35% !important;
+        padding-right: 0rem !important;
+    }
+    #table-details td {
+        width: 35% !important;
+        padding-left: 3rem !important;
     }
 }
