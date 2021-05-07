@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div> -->
 
-  <div class="inside_form" id="admin">
+  <div class="content inside_form" id="admin">
     <div class="overlay">
       <form action="" name="myForm" method="post">
         <div>
@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
 
 
-  <footer class="footer-distributed sticky-bottom">
+  <footer class="footer footer-distributed sticky-bottom">
 
     <div class="footer-right">
       <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>

@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </nav>
 
   <br><br><br>
-  <div class="container mt-4 mb-5" style="text-align:center;">
+  <div class="content container mt-4 mb-5" style="text-align:center;">
 
     <br>
     <h3> My details </h3>
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div>
 
-  <footer class="footer-distributed sticky-bottom">
+  <footer class="footer footer-distributed sticky-bottom">
 
     <div class="footer-right">
       <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>

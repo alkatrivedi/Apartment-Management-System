@@ -123,7 +123,7 @@ body {
     height: 18rem;
     text-align: left;
     font: normal 16px sans-serif;
-    margin-top: 9rem !important;
+    margin-top: 7rem !important;
     padding: 25px 160px;
 }
 
@@ -238,4 +238,23 @@ body {
         line-height: 1rem;
         font-size: 16px;
     }
+}
+
+/* ------------------css to stay-put footer at bottom-------------------- */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }

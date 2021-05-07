@@ -220,3 +220,22 @@ body {
         font-size: 16px;
     }
 }
+
+/* ------------------css to stay-put footer at bottom-------------------- */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}

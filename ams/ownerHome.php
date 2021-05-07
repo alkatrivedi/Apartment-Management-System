@@ -88,7 +88,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     </div>
   </section>
 
-  <div class="inside_form">
+  <div class="content inside_form">
     <div class="overlay">
       <?php
       $owner = $_SESSION['oid'];
@@ -126,7 +126,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     </div>
   </div>
 
-  <footer class="footer-distributed sticky-bottom">
+  <footer class="footer footer-distributed sticky-bottom">
 
     <div class="footer-right">
       <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>

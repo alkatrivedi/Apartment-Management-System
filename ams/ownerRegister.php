@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   @$pass = $_GET['pass'];
   @$phn = $_GET['phn'];
   ?>
-  <div class="container" style="text-align:center;">
+  <div class="content container" style="text-align:center;">
 
     <br> <br>
     <p style="font-size: 20px; font-weight: 500; color: darkblue;"> Add Owner </p>
@@ -239,7 +239,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   </div>
 
-  <footer class="footer-distributed sticky-bottom">
+  <footer class="footer footer-distributed sticky-bottom">
 
     <div class="footer-right">
       <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>

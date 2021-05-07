@@ -89,7 +89,7 @@ body {
     width: 32%;
     max-width: 525px;
     min-height: 500px;
-    margin: 8rem auto;
+    margin: 8rem auto 4rem;
     display: flex;
     border-radius: 1rem;
     justify-content: center;
@@ -317,4 +317,23 @@ hr {
         line-height: 1rem;
         font-size: 16px;
     }
+}
+
+/* ------------------css to stay-put footer at bottom-------------------- */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }

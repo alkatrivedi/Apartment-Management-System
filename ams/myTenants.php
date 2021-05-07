@@ -60,7 +60,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
 
   <br><br>
 
-  <div class="tenant-table mt-5" style="text-align:center;">
+  <div class="content tenant-table mt-5" style="text-align:center;">
     <br><br>
     <?php
     $owner = $_SESSION['oid'];
@@ -126,7 +126,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     </table>
   </div>
 
-  <footer class="footer-distributed sticky-bottom">
+  <footer class="footer footer-distributed sticky-bottom">
 
     <div class="footer-right">
       <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>

@@ -56,7 +56,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
 
   <br><br><br>
 
-  <div class="container mt-4">
+  <div class="content container mt-4">
     <?php
     $tid = $_SESSION['tid'];
     $rnt = $_SESSION['rent'];
@@ -87,7 +87,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true || $_SESSION[
     </table>
   </div>
 
-  <footer class="footer-distributed sticky-bottom">
+  <footer class="footer footer-distributed sticky-bottom">
 
     <div class="footer-right">
       <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>
