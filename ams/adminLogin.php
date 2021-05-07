@@ -49,6 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -124,6 +126,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
     </div>
   </div>
+
+
+  <footer class="footer-distributed sticky-bottom">
+
+    <div class="footer-right">
+      <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>
+      <p style="color: #8f9296; font-size: 14px; margin-bottom: 2rem;">
+        Keep all the information related to your building apartments, tenants and rentals at one place.
+      </p>
+      <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="526894587"><i class="fa fa-phone"></i></a>
+      <a href="https://github.com/alkatrivedi/Apartment-Management-System"><i class="fab fa-github"></i></a>
+
+    </div>
+
+    <div class="footer-left">
+      <img class="footlogo" src="assets/tt.png">
+      <p class="footer-links">
+        <a class="link-1" href="adminLogin.php">Admin Login</a>
+        <a href="ownerLogin.php">Owner Login</a>
+        <a href="tenantLogin.php">Tenant Login</a>
+      </p>
+      <p>Copyright © 2021 HomeRiver Group - Apartment Management System.</p>
+    </div>
+
+  </footer>
 
 
   <!-- login form -->

@@ -126,6 +126,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 
+  <footer class="footer-distributed sticky-bottom">
+
+    <div class="footer-right">
+      <p style="color: white; font-size: 16px; font-weight: bold;">About the Website</p>
+      <p style="color: #8f9296; font-size: 14px; margin-bottom: 2rem;">
+        Keep all the information related to your building apartments, tenants and rentals at one place.
+      </p>
+      <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="526894587"><i class="fa fa-phone"></i></a>
+      <a href="https://github.com/alkatrivedi/Apartment-Management-System"><i class="fab fa-github"></i></a>
+
+      <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    </div>
+
+    <div class="footer-left">
+      <img class="footlogo" src="assets/tt.png">
+      <p class="footer-links">
+        <a class="link-1" href="adminLogin.php">Admin Login</a>
+        <a href="ownerLogin.php">Owner Login</a>
+        <a href="tenantLogin.php">Tenant Login</a>
+      </p>
+      <p>Copyright © 2021 HomeRiver Group - Apartment Management System.</p>
+    </div>
+
+  </footer>
+
   <!-- bootstrap jquery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/ reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
